@@ -148,6 +148,7 @@ Custom M Codes
 
 #include "Repetier.h"
 #include <SPI.h>
+#include "sig_modCalibration.h"
 
 #if UI_DISPLAY_TYPE == DISPLAY_ARDUINO_LIB
 //#include <LiquidCrystal.h> // Uncomment this if you are using liquid crystal library
@@ -156,6 +157,7 @@ Custom M Codes
 void setup()
 {
     Printer::setup();
+    SigMod::calibration();
 }
 
 void loop()
